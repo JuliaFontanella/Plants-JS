@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Juju's Plants</title>
+</head>
+
+<body>
+    <header id="header">
+        <div id="topbar">
+            <a href="index.html">
+                <div>Accueil</div>
+            </a>
+            <input class="search" type="text" placeholder="Trouvez votre plante...">
+            <div id="inscription">
+                <a href="contact.html">
+                    <div>Inscription</div>
+                </a>
+            </div>
+        </div>
+        <div id="logo">
+            <a href="index.html">
+                <div>juju's plants</div>
+            </a>
+        </div>
+        <h1 id="title2">
+            Formulaire d'inscription
+        </h1>
+        <p>
+            Inscrivez-vous pour sauvergarder votre panier et rester au courant des dernières actualités !
+        </p>
+        <div>
+            <div class="message-error">
+                <ul></ul>
+            </div>
+            <div class="message-success">
+
+                Formulaire envoyé avec succès !
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="pseudo">Pseudo</label>
+                    <input type="text" name="pseudo" id="pseudo">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div>
+                    <label for="password2">Confirmer votre mot de passe</label>
+                    <input type="password" name="password2" id="password2">
+                </div>
+
+                <div class="gender">
+                    <div>
+                        <input type="radio" name="genre" id="femme" value="femme">
+                        <label for="femme">Femme</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="genre" id="homme" value="homme">
+                        <label for="homme">Homme</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="genre" id="autre" value="autre">
+                        <label for="autre">Autre</label>
+                    </div>
+                </div>
+                <div>
+                    <label>Quelle est votre plante préférée ?</label>
+                    <select name="plante" id="plante">
+                        <option value="interieur"></option>
+                        <option value="interieur">Plantes d'intérieur</option>
+                        <option value="exterieur">Plantes d'exterieur</option>
+                        <option value="grasses">Plantes grasses</option>
+
+
+                    </select>
+                </div>
+
+
+                <button type="submit">S'inscrire</button>
+
+        </div>
+        <script src="main.js"></script>
+    </body>

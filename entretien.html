@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Juju's Plants</title>
+    <script src="main.js"></script>
+
+<body>
+    <header id="header">
+        <div id="topbar">
+            <a href="index.html">
+                <div>Accueil</div>
+            </a>
+            <input class="search" type="text" placeholder="Trouvez votre plante...">
+            <div id="inscription">
+                <a href="contact.html">
+                    <div>Inscription</div>
+                </a>
+            </div>
+        </div>
+        <div id="logo">
+            <a href="index.html">
+                <div>juju's plants</div>
+            </a>
+        </div>
+
+    </header>
+
+
+    <main class="tabs">
+            <ul>
+                <li class="tab tab-arrosage tab-active">Arrosage</li>
+                <li class="tab tab-lumiere">Lumière</li>
+                <li class="tab tab-engrais">Engrais</li>
+                <li class="tab tab-rempotage">Rempotage</li>
+                <li class="tab tab-maladies"">Maladies</li>
+            </ul>
+            <div class="content arrosage active">
+                <h1>L'importance de l'arrosage régulier</h1>
+                <p>L'arrosage régulier est essentiel pour maintenir la santé de vos plantes d'intérieur. Chaque plante a des besoins en eau différents, il est donc important de comprendre les besoins spécifiques de chaque espèce que vous cultivez. En général, il est recommandé d'arroser lorsque le sol est sec au toucher, mais évitez également de trop arroser car cela peut entraîner la pourriture des racines. Assurez-vous également que les pots disposent de suffisamment de trous de drainage pour permettre à l'excès d'eau de s'écouler.</p>
+             </div>
+            <div class="content lumiere">
+                <h1> La lumière adéquate pour des plantes heureuses</h1>
+                <p>La lumière joue un rôle crucial dans la croissance des plantes. Assurez-vous de placer vos plantes là où elles reçoivent la quantité de lumière appropriée selon leurs besoins. Les plantes qui nécessitent beaucoup de lumière directe du soleil devraient être placées près d'une fenêtre exposée au sud ou à l'ouest. En revanche, les plantes qui préfèrent l'ombre partielle prospéreront mieux dans des zones moins lumineuses. Surveillez attentivement vos plantes pour détecter tout signe de brûlure causée par une exposition excessive au soleil ou de jaunissement dû à un manque de lumière.</p>
+             </div>
+            <div class="content engrais">
+                <h1>Nourrir vos plantes avec des fertilisants organiques</h1>
+                <p>Pour favoriser une croissance saine, il est important de nourrir vos plantes avec des fertilisants adaptés. Les fertilisants organiques sont généralement préférables car ils fournissent des éléments nutritifs essentiels sans les produits chimiques agressifs présents dans de nombreux engrais synthétiques. Choisissez un engrais équilibré spécifique à votre type de plante et suivez les instructions de dosage recommandées. N'oubliez pas que trop de nourriture peut être aussi nocif que pas assez, alors ne suralimentez pas vos plantes.</p>
+            </div>
+            <div class="content rempotage">
+                <h1>Le rempotage pour favoriser la croissance </h1>
+                <p>Rempoter vos plantes régulièrement est une étape importante pour maintenir leur santé à long terme. Les racines des plantes peuvent devenir à l'étroit dans leurs pots, ce qui limite leur capacité à absorber les nutriments et l'eau. Lorsque vous remarquez que les racines commencent à remplir le pot, il est temps de rempoter. Choisissez un pot légèrement plus grand que le précédent et utilisez un terreau frais et bien drainé. Soyez délicat lors du transfert pour ne pas endommager les racines.</p>
+            </div>
+            <div class="content maladies">
+                <h1>La lutte contre les ravageurs et les maladies </h1>
+            <p>Surveiller attentivement vos plantes est essentiel pour détecter rapidement les signes de ravageurs ou de maladies. Les insectes comme les pucerons, les cochenilles et les acariens peuvent causer des dommages considérables s'ils ne sont pas traités rapidement. Utilisez des méthodes de lutte biologique chaque fois que possible, comme l'introduction de prédateurs naturels ou l'utilisation de savons insecticides doux. En cas d'infection fongique ou bactérienne, retirez les parties infectées de la plante et traitez avec un fongicide ou un bactéricide adapté. Une bonne hygiène, y compris le nettoyage régulier des feuilles et l'aération des plantes, peut également contribuer à prévenir les problèmes de santé.</p>
+        </div>
+    </main>
+</body>
+
+
+<script>
+    let tabs = document.querySelectorAll('.tab')
+tabs.forEach(tab => {
+  tab.addEventListener('click', function() {
+    tabs.forEach(tab => {
+      tab.classList.remove('tab-active')
+    })
+    
+    let contents = document.querySelectorAll('.content')
+    contents.forEach(content => {
+      content.classList.remove('active')
+    })
+
+    this.classList.add('tab-active')
+
+    if (this.classList.contains('tab-arrosage')) {
+      document.querySelector('.content.arrosage').classList.add('active')
+    } else if (this.classList.contains('tab-lumiere')) {
+      document.querySelector('.content.lumiere').classList.add('active')
+    } else if (this.classList.contains('tab-engrais')) {
+      document.querySelector('.content.engrais').classList.add('active')
+    } else if (this.classList.contains('tab-rempotage')) {
+      document.querySelector('.content.rempotage').classList.add('active')
+    } else if (this.classList.contains('tab-maladies')) {
+      document.querySelector('.content.maladies').classList.add('active')
+    }
+  })
+})
+
+
+
+</script>
+
+<footer id="footer">
+    &copy; Julia Fontanella 2023
+</footer>

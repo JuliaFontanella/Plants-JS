@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+  <link rel="stylesheet" href="style.css">
+  <title>Juju's Plants</title>
+</head>
+
+<body>
+  <header id="header">
+    <div id="topbar">
+      <a href="index.html">
+        <div>Accueil</div>
+      </a>
+      <input class="search" type="text" placeholder="Trouvez votre plante...">
+      <div id="inscription">
+        <a href="contact.html">
+          <div>Inscription</div>
+        </a>
+      </div>
+    </div>
+    <div id="logo">
+      <a href="index.html">
+        <div>juju's plants</div>
+      </a>
+    </div>
+    <div id="categories">
+      <div class="block">
+        <img class="icon" src="./Images/jardinage.png" alt="icone jardinage">
+        <a href="products.html" title="Produits">Produits</a>
+      </div>
+      <div class="block">
+        <img class="icon" src="./Images/plante-araignee.png" alt="icone plante">
+        <a href="entretien.html" title="Conseils d'entretien">Conseils d'entretien</a>
+      </div>
+    </div>
+  </header>
+
+
+  <a id="hero" href="products.html">
+
+    <div class="swiper mon-slider">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide palmier">
+          <p class="subtitle">En promo ce mois-ci</p>
+          <p class="title">Palmiers</p>
+
+        </div>
+        <div class="swiper-slide ficcus">
+          <p class="subtitle">En promo ce mois-ci</p>
+          <p class="title">Ficcus</p>
+
+
+        </div>
+        <div class="swiper-slide yucca">
+          <p class="subtitle">En promo ce mois-ci</p>
+          <p class="title">Yuccas</p>
+
+        </div>
+        ...
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+
+    </div>
+  </a>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+<footer id="footer">
+  &copy; Julia Fontanella 2023
+</footer>
